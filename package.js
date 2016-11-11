@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'miguelalarcos:flow-router-pagination',
+  name: 'othermachines:flow-router-pagination',
   version: '0.1.6',
   // Brief, one-line summary of the package.
   summary: 'A simple pagination package for flow-router.',
@@ -12,12 +12,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.use('coffeescript');
   api.use('jquery');
   api.use('templating');
   api.addFiles('flow-router-pagination.html', 'client');
-  api.addFiles('flow-router-pagination.css', 'client');
-  api.addFiles('flow-router-pagination.coffee', 'client');
+  api.addFiles('flow-router-pagination.js', 'client');
 });
 
 //Package.onTest(function(api) {

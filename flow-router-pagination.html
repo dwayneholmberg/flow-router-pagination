@@ -1,13 +1,25 @@
 <template name="paginationBar">
-    {{#if showMinus}}
-        <label class="first-button first">&lt;&lt;</label>
-        <label class="minus-button minus">-</label>
-    {{/if}}
-    {{#each pages this.count}}
-        <label page="{{this}}" class="page-button change-page {{selected}}">{{pageNumber}}</label>
-    {{/each}}
-    {{#if showPlus this.count}}
-        <label class="plus-button plus">+</label>
-        <label class="last-button last">&gt;&gt;</label>
-    {{/if}}
+  {{#if showPager this.count}}
+    <ul class="pagination">
+      {{#if showMinus}}
+        <li><a href="#" class="first-button first">&laquo;</a></li>
+        <!--
+        <li><a href="#" class="minus-button minus">-</a></li>
+        -->
+      {{/if}}
+      {{#each pages this.count}}
+        {{#if isActive}}
+          <li class="active"><a href="#" page="{{this}}" class="page-button change-page">{{pageNumber}}</a></li>
+        {{else}}
+          <li><a href="#" page="{{this}}" class="page-button change-page">{{pageNumber}}</a></li>
+        {{/if}}
+      {{/each}}
+      {{#if showPlus this.count}}
+        <!--
+        <li><a href="#" class="plus-button plus">+</a></li>
+        -->
+        <li><a href="#" class="last-button last">&raquo;</a></li>
+      {{/if}}
+    </ul>
+  {{/if}}
 </template>

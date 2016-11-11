@@ -2,6 +2,8 @@ flow-router-pagination
 ======================
 A simple pagination package for flow-router.
 
+Forked from miguelalarcos/flow-router-pagination. Converted from coffeescript and tweaked.
+
 Explanation
 -----------
 Add a pagination widget is as simple as:
