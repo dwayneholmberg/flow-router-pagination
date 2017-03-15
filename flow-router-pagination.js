@@ -39,7 +39,7 @@ Template.paginationBar.helpers({
 
 Template.paginationBar.events({
   'click .first': function(e, t) {
-    event.preventDefault();
+    e.preventDefault();
     return FlowRouter.setQueryParams({
       page: 0
     });
@@ -47,7 +47,7 @@ Template.paginationBar.events({
   'click .last': function(e, t) {
     var total;
     total = Math.ceil(Counts.get(this.count) / this.itemsPerPage);
-    event.preventDefault();
+    e.preventDefault();
     return FlowRouter.setQueryParams({
       page: total - 1
     });
@@ -55,7 +55,7 @@ Template.paginationBar.events({
   'click .plus': function(e, t) {
     var current;
     current = parseInt(FlowRouter.getQueryParam('page')) || 0;
-    event.preventDefault();
+    e.preventDefault();
     return FlowRouter.setQueryParams({
       page: current + 1
     });
@@ -63,7 +63,7 @@ Template.paginationBar.events({
   'click .minus': function(e, t) {
     var current;
     current = parseInt(FlowRouter.getQueryParam('page')) || 0;
-    event.preventDefault();
+    e.preventDefault();
     return FlowRouter.setQueryParams({
       page: current - 1
     });
@@ -72,7 +72,7 @@ Template.paginationBar.events({
     var page;
     page = $(e.target).attr('page');
     page = parseInt(page);
-    event.preventDefault();
+    e.preventDefault();
     return FlowRouter.setQueryParams({
       page: page
     });
