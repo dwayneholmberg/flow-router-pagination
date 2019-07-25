@@ -14,6 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
   api.use('jquery');
   api.use('templating');
+  api.use('ostrio:flow-router-extra');
   api.addFiles('flow-router-pagination.html', 'client');
   api.addFiles('flow-router-pagination.js', 'client');
 });
